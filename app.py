@@ -1,7 +1,7 @@
 import streamlit as st
 from PIL import Image
 import torch
-
+import gdown
 
 def main():
     new_title = '<p style="font-size: 42px;">SmartVisionAI!</p>'
@@ -44,7 +44,7 @@ def main():
             object_detection_image(img1, confThreshold, nmsThreshold, my_bar)
 
 def object_detection_image(img1, confThreshold, nmsThreshold, my_bar):
-    
+
         model = torch.hub.load('ultralytics/yolov5', 'custom', path='./best.pt',force_reload=True)
         model.conf = confThreshold/100
         model.iou = nmsThreshold/100
@@ -66,4 +66,7 @@ def object_detection_image(img1, confThreshold, nmsThreshold, my_bar):
         my_bar.progress(100)   
 
 if __name__ == '__main__':
-		main()	
+
+    url = "https://drive.google.com/file/d/1-3lfM37xcm4CNwJmHbs9n8PBeO20h22W/view?usp=sharing"
+    gdown.download(url=url, quiet=False, fuzzy=True)
+    main()
