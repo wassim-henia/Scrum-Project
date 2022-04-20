@@ -16,12 +16,12 @@ def main():
     file = None
 
     if choice == "Object Detection(Image)":
-        #st.subheader("Object Detection")
+
         read_me_0.empty()
         read_me.empty()
-        st.title('Object Detection for Images')
+        st.title('SmartVisionAI detects prohibited items in real-time from X-ray Baggage Scanner')
         st.subheader("""
-        This object detection project takes in an image and outputs the image with bounding boxes created around the objects in the image
+        SmartVisionAI is an Artificial Intelligence-based solution which ensures accuracy and efficiency in threat-detection at security checkpoints. With robust & fast algorithms at its core
         """)
         file = st.file_uploader('Upload Image', type = ['jpg','png','jpeg'])
 
