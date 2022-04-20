@@ -4,4 +4,8 @@
  To start do the following command :
  
  pip install -r requirements
+
+ ## TODOs
+ - add else statement when the model is downloaded
+ - pop up for dowloading the model
  
